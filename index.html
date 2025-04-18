@@ -20,9 +20,10 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://source.unsplash.com/1600x900/?boxing-ring');">
-    <div class="absolute inset-0 bg-black opacity-50"></div>
+  <!-- Hero Section with Photo Background -->
+  <section class="relative h-screen flex items-center justify-center">
+    <!-- Photo background instead of gray overlay -->
+    <img src="https://source.unsplash.com/1600x900/?boxing-gym" alt="Boxing Gym" class="absolute inset-0 w-full h-full object-cover" />
     <div class="relative z-10 text-center px-6">
       <h2 class="text-5xl font-extrabold text-white mb-4">Добро пожаловать в Vata9a</h2>
       <p class="text-xl text-white/80 mb-6">Присоединяйтесь к лучшим боксерам Днепра</p>
@@ -33,7 +34,7 @@
   <!-- About Section -->
   <section id="about" class="py-16 bg-white">
     <div class="container mx-auto px-6 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-      <img src="https://source.unsplash.com/600x400/?boxing-gloves" alt="Boxing gloves" class="rounded-2xl shadow-lg" />
+      <img src="images.jpg" alt="Boxing gloves" class="rounded-2xl shadow-lg" />
       <div>
         <h3 class="text-3xl font-bold text-blue-600 mb-4">О нашем клубе</h3>
         <p class="text-lg mb-4">
@@ -81,9 +82,9 @@
   <section id="contact" class="py-16 bg-white">
     <div class="container mx-auto px-6 lg:px-20">
       <h3 class="text-3xl font-bold text-blue-600 text-center mb-8">Свяжитесь с нами</h3>
-      <form class="max-w-xl mx-auto grid grid-cols-1 gap-6">
-        <input type="text" name="name" placeholder="Ваше имя" class="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300" />
-        <input type="email" name="email" placeholder="Ваш Email" class="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300" />
+      <form class="max-w-xl mx-auto grid grid-cols-1 gap-6" action="/signup" method="POST">
+        <input type="text" name="name" placeholder="Ваше имя" class="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300" required />
+        <input type="email" name="email" placeholder="Ваш Email" class="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300" required />
         <textarea name="message" placeholder="Сообщение" rows="4" class="border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
         <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg mx-auto">Отправить</button>
       </form>
